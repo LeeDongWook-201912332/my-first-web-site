@@ -3,23 +3,83 @@
 <head>
     <title>WEB1 - CSS</title> 
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src = "color.js"></script>
+        <!--a는 어떤걸 스타일할지 선택하는 의미에서 선택자라불림
+        선택자앞에 .을붙이면 클래스 이름으로 선택
+        #은 id이름으로 선택 클래스보다 우선순위가 높음
+        ordered list
+        unorderd list
+    <style>
+        #grid{
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        #grid ol{
+            border-right: 1px solid gray;
+            width:100px;
+            margin: 0;
+            padding: 20px;
+            padding-left:33px;
+        }        
+        h1 {
+            font-size :45px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding: 20px;
+        }
+        body{
+            margin:0;
+        }
+        #article{
+            padding-left : 25px;
+        }
+        @media (min-width : 800px) {
+            #grid{
+            display: block;
+            grid-template-columns: 150px 1fr;
+            }   
+            ol{
+                border-right:none;
+            }
+            #grid ol{
+                border-right:none;
+            }
+            h1{
+                border-bottom:none;
+            } 
+        }
+    </style> style태그는 css문법으로 해석해줘-->
 </head>
 
 <body>
     <h1><a href = "index.html">WEB</a></h1>
-    <h2><u>CSS이란 무엇인가?</u></h2>
+    <input type = "button" value = "night" onclick = "
+        nightDayHandler(this);
+    "> 
+    <div id = "grid">
     <ol>
-        <li><a href = "1.html">HTML</a></li>
-        <li><a href = "2.html">CSS</a></li>
+        <li><a href = "1.html" >HTML</a></li>
+        <li><a href = "2.html" >CSS</a></li>
         <li><a href = "3.html">JavaScript</a></li>
-    </ol> ordered list
-    <ul> unorderd list
-        <li>egoing</li>
-        <li>k8805</li>
-        <li>youbin</li>
-    </ul>
-    <p style = "margin-top:45px;">
-    CSS에대한 설명
-    </p>
+    </ol> 
+        <div id = "article">
+        <h2><u>CSS이란 무엇인가?</u></h2>
+    
+        <p style = "margin-top:45px;">
+        CSS에대한 설명
+        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.
+        [1] Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,
+        the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. 
+        Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces 
+        for web applications, and user interfaces for many mobile applications.
+        </p>
+        </div>
+    </div>
 </body>
 </html>
